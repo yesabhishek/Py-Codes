@@ -52,14 +52,20 @@ def equilibriumPoint(A, N):
         return(-1)
 
     else:
+        
+
         if N%2==0:
-            return "hhaha"
+            mid = N//2
+            if(Sum_before(A, mid-1) == Sum_After(A, mid, N-1)):
+                return mid
+            else:
+                return False 
         else:
             mid = N//2
             #print(mid)
 
             if(Sum_before(A, mid-1) == Sum_After(A, mid+1, N-1)):
-                return True
+                return mid+1
             else:
                 return False
 

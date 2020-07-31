@@ -13,7 +13,7 @@ N=int(input())
 l=[]
 A=[]
 for i in range(0,N):
-  l.append(int(input()))
+  l.append((input()))
 
 for i in range(0,N-1):
    

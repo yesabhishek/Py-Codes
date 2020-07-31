@@ -31,9 +31,13 @@ Testcase 1: Given array : 1 2 3 5. Missing element is 4. """
 
 N = int(input())
 lst = [int(item) for item in input().split()]
-lst.sort()
-i=lst[0]
-for k in range(i,N-1):
-    if(k!=lst[k-1]):
-        print(k)
+
+
+for i in range(0,N-2):
+    
+    if lst[i+1]-lst[i] == 1:
+        count = lst[i+1]
+    
+
+print(count+1) 
         
