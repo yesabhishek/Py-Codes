@@ -35,10 +35,16 @@ Reversing this group, we have elements in order as 3, 2, 1. """
 N1 = int(input())
 N2 = int(input()) """
 lst1 = [int(item) for item in input().split()]
-#lst2 = [int(item) for item in input().split()]
+lst2 = []
 K = int(input())
+N = len(lst1)
+R= N - K
 
 
-for i in range(K-1,0,-1):
-    print(lst1[i])
+for i in range(K-1,-1,-1):
+    lst2.append(lst1[i])
 
+for i in range(N-1,K-1,-1):
+    lst2.append(lst1[i])
+
+print(lst2)
