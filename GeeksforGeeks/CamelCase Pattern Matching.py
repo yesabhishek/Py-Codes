@@ -39,13 +39,67 @@ WelcomeToGeeksForGeeks
 
 # T = int(input())
 
-N_words = int(input())
-N_spaces = N_words - 1
 
-S1 = input()
-S2 = input()
+def find_Camel(S2,word):
+    dummy = ""
+    for i in range(0,len(S2)):
+        for j in range(0,len(word)):
+            if S2[i].casefold == word[j].casefold:
+                dummy += S2[i]
+                if dummy == S2:
+                    return word
+                
+                
 
-if S1[2] == S2[2]:
-    print("Matched")
+  
+    return "haha"
+
+
+if __name__ == "__main__":
+    
+    N_words = int(input())
+    N_spaces = N_words - 1
+    S1 = input()
+    S2 = input()
+
+    i = 0
+    word = ""
+    while S1[i]!= " " and i<len(S1):
+
+        if i ==len(S1)-1:
+            word += S1[i]
+            #print("word is: ",word)
+            print("Not found Sorry,Bye")
+            break
+
+        if S1[i+1] == " ":
+            word += S1[i]
+            #print("word is: ",word)
+            if find_Camel(S2,word) == word:
+                print("CamelCasing Matched : ",word,"with",S2)
+                break
+            else: 
+                i += 2
+                word = ""
+                continue
+        else:
+            word += S1[i]
+            #print(word)
+            i += 1
+
+
+""" 
+
+
+    for i in range(0,len(S2)):
+        for j in range(0,len(S1)):
+            if S2[i].casefold == S1[j].casefold:
+
+
+ """
+
+
+""" if S1[2].casefold == S2[2].casefold:
+    print("Matched:",S1[2],S2[2])
 else:
-    print("haha")
+    print("Did not match :",S1[2],S2[2]) """

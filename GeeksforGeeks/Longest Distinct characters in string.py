@@ -23,3 +23,31 @@ geeksforgeeks
 Output:
 6
 7 """
+
+def Look_Back(C,word):
+
+    for i in range(0,len(word)):
+        if C == word[i]:
+            return True
+        
+    return False
+
+if __name__ == "__main__":
+
+    # T = int(input())
+    word = ""
+    lst = []
+    S = input()
+    for i in range(0,len(S)):
+        if Look_Back(S[i],word) == False:
+            word += S[i]
+            
+        else:
+            lst.append(word)
+            word = ""
+            continue
+            
+     
+
+#print(lst)
+print(max(lst))
