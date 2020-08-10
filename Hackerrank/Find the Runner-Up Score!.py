@@ -4,4 +4,5 @@ if __name__ == '__main__':
 
     arr.sort(reverse=True)
     ans = (set(arr))
-    print(ans[n-1])
+    real = (sorted(ans, reverse=True))
+    print(real[1])
